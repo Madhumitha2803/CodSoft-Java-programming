@@ -1,0 +1,60 @@
+package codsoft;
+
+import java.util.Scanner;
+
+public class AtmInterface {
+
+	public static void main(String[] args) {
+		int amount = 1000000,withdraw,deposit;
+		Scanner a = new Scanner(System.in);
+		while(true)
+		{
+			System.out.println("Press 1 for Withdrawal");
+			System.out.println("Press 2 for Deposit");
+			System.out.println("Press 3 for To check bank balance");
+			System.out.println("Press 4 for END");
+			System.out.println("Choose your requirement");
+			int atm = a.nextInt();
+			switch(atm)
+			{
+			case 1:
+				System.out.println("Enter the amount to be withdrawn = ");
+				withdraw = a.nextInt();
+				if(amount >= withdraw)
+				{
+					amount= amount-withdraw;
+					System.out.println("Please collect the Money");
+					System.out.println("Remove the card");
+				}
+				else
+				{
+					System.out.println("Insufficient amount");
+				}
+				System.out.println("");
+				break;
+				
+			case 2:
+				System.out.println("Enter the amount to be deposited = ");
+				deposit = a.nextInt();
+	            amount= amount+deposit;
+				System.out.println("Your money has been deposited successfully");
+				System.out.println("");
+				break;
+			case 3:
+				System.out.println("Bank Balance = "+amount);
+				System.out.println("");
+				break;
+			case 4:
+				System.exit(0);
+				
+				
+				
+				
+			}
+			
+		}
+
+			
+	}
+
+}
