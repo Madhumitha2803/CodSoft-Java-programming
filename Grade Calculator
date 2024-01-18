@@ -1,0 +1,42 @@
+package codsoft;
+
+import java.util.Scanner;
+
+public class Gradecalculator {
+	
+
+	public static void main(String[] args) {
+		float[] mark = new float[8];
+		float sum = 0,avg;
+		int num;
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter the 8 subject marks of the student : ");
+		for(num=0;num<8;num++)
+			mark[num]=scan.nextFloat();
+		for(num=0;num<8;num++)
+			sum= sum+mark[num];
+		System.out.println("\nTotal marks scored by the student : "+sum);
+		avg=sum/8;
+		System.out.println("Average mark percentage scored by the student : "+avg);
+		System.out.println("Grade obtained by the student");
+		if(avg>=90)
+			System.out.println("O grade");
+		else if(avg>=89 && avg<90)
+			System.out.println("A+ grade");
+		else if(avg>=85 && avg<89)
+			System.out.println("A grade");
+		else if(avg>=79 && avg<85)
+			System.out.println("B grade");
+		else if(avg>=69 && avg<79)
+			System.out.println("C grade");
+		else if(avg>=45 && avg<69)
+			System.out.println("D grade");
+		else 
+			System.out.println("Fail");
+			
+		
+
+	}
+
+}
